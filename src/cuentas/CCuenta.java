@@ -70,19 +70,39 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
     
+    /**
+     * Constructor
+     */
     public CCuenta()
     {
     }
+    
+    /**
+     * Constructor
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo 
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
-        nombre =nom;
+        nombre=nom;
         cuenta=cue;
         saldo=sal;
     }
+    /**
+     * Saldo de la cuenta
+     * @return 
+     */
     public double estado()
     {
         return getSaldo();
     }
+    
+    /**
+     * Retirar dinero de la cuenta
+     * @param cantidad 
+     */
     public void retirar(double cantidad)
     {
         try {
@@ -96,6 +116,10 @@ public class CCuenta {
             System.out.println(e);
         }
     }
+    /**
+     * Ingresar dineero en la cuenta
+     * @param cantidad 
+     */
     public void ingresar(double cantidad)
     {
         try {

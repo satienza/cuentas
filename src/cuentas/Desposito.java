@@ -13,17 +13,22 @@ public class Desposito {
     /**
      * @param args the command line arguments
      */
-public static void main(String[] args) {
-    CCuenta miCuenta;
-    double saldoActual;
-    miCuenta = new CCuenta("Antonio López","1000-2365-85-1230456789",2500,0);
-    saldoActual = miCuenta.estado();
-    System.out.println("El saldo actual es "+ saldoActual );
-        operaciones(miCuenta);
-    saldoActual = miCuenta.estado();
-    System.out.println("El saldo actual es "+ saldoActual );
-}
+    public static void main(String[] args) {
+    
+        CCuenta miCuenta;
+        double saldoActual;
+        miCuenta = new CCuenta("Antonio López","1000-2365-85-1230456789",2500,0);
+        saldoActual = miCuenta.estado();
+        System.out.println("El saldo actual es "+ saldoActual );
+            operaciones(miCuenta);
+        saldoActual = miCuenta.estado();
+        System.out.println("El saldo actual es "+ saldoActual );
+    }
 
+    /**
+     * 
+     * @param miCuenta 
+     */
     public static void operaciones(CCuenta miCuenta) {
         // Operaciones de ingreso y retiro
         miCuenta.retirar(2300);
