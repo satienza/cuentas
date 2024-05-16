@@ -5,66 +5,12 @@
 package cuentas;
 
 /**
- *
+ * Create a current account. Allows to make movements and consult the balance.
+ * @version 1.0
  * @author satienza
  */
 public class CCuenta {
-
-    /**
-     * @return the nombre
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * @param nombre the nombre to set
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    /**
-     * @return the cuenta
-     */
-    public String getCuenta() {
-        return cuenta;
-    }
-
-    /**
-     * @param cuenta the cuenta to set
-     */
-    public void setCuenta(String cuenta) {
-        this.cuenta = cuenta;
-    }
-
-    /**
-     * @return the saldo
-     */
-    public double getSaldo() {
-        return saldo;
-    }
-
-    /**
-     * @param saldo the saldo to set
-     */
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
-    /**
-     * @return the tipoInterés
-     */
-    public double getTipoInterés() {
-        return tipoInterés;
-    }
-
-    /**
-     * @param tipoInterés the tipoInterés to set
-     */
-    public void setTipoInterés(double tipoInterés) {
-        this.tipoInterés = tipoInterés;
-    }
+    
     private String nombre;
     private String cuenta;
     private double saldo;
@@ -79,10 +25,10 @@ public class CCuenta {
     
     /**
      * Constructor
-     * @param nom
-     * @param cue
-     * @param sal
-     * @param tipo 
+     * @param nom Account user name
+     * @param cue Account number
+     * @param sal Account balance
+     * @param tipo Account interest rate
      */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
@@ -90,8 +36,74 @@ public class CCuenta {
         cuenta=cue;
         saldo=sal;
     }
+    
     /**
-     * Saldo de la cuenta
+     * Returns the user name
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * Set the user name
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * Returns the account number
+     * @return the cuenta
+     */
+    public String getCuenta() {
+        return cuenta;
+    }
+
+    /**
+     * Set the account number
+     * @param cuenta the cuenta to set
+     */
+    public void setCuenta(String cuenta) {
+        this.cuenta = cuenta;
+    }
+
+    /**
+     * Returns the account amount
+     * @return the saldo
+     */
+    public double getSaldo() {
+        return saldo;
+    }
+
+    /**
+     * Set the account amount
+     * @param saldo the saldo to set
+     */
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    /**
+     * Return the interest rate
+     * @return the tipoInterés
+     */
+    public double getTipoInterés() {
+        return tipoInterés;
+    }
+
+    /**
+     * Set the interest rate
+     * @param tipoInterés the tipoInterés to set
+     */
+    public void setTipoInterés(double tipoInterés) {
+        this.tipoInterés = tipoInterés;
+    }
+
+    /**
+     * Return the account status (amount)
+     * @see #getSaldo() 
      * @return 
      */
     public double estado()
@@ -100,7 +112,7 @@ public class CCuenta {
     }
     
     /**
-     * Retirar dinero de la cuenta
+     * Withdraw from the account
      * @param cantidad 
      */
     public void retirar(double cantidad)
@@ -117,7 +129,7 @@ public class CCuenta {
         }
     }
     /**
-     * Ingresar dineero en la cuenta
+     * Deposit into the account
      * @param cantidad 
      */
     public void ingresar(double cantidad)

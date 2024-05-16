@@ -5,7 +5,7 @@
 package cuentas;
 
 /**
- *
+ * @version 1.0
  * @author satienza
  */
 public class Desposito {
@@ -26,7 +26,7 @@ public class Desposito {
     }
 
     /**
-     * 
+     * Realiza operaciones en la cuenta
      * @param miCuenta 
      */
     public static void operaciones(CCuenta miCuenta) {
